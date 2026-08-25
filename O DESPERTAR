@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Despertar – 7 dias no mundo de Deus | Marlon Bastos</title>
+  <meta name="description" content="Descubra o que Deus pode fazer quando você separa 7 dias para Ele. O Despertar – livro de Marlon Bastos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070b12;
+      --bg-mid: #0c1624;
+      --accent: #f0c14b;
+      --text-muted: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .waves {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 180px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wave {
+      position: absolute;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background-repeat: repeat-x;
+      background-position: 0 bottom;
+    }
+    .wave1 {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,100 350,20 600,60 C850,100 1050,20 1200,60 L1200,120 L0,120 Z' fill='%230a1520'/%3E%3C/svg%3E") repeat-x;
+      background-size: 50% 100%;
+      animation: waveMove 12s linear infinite;
+      opacity: 0.9;
+      bottom: 0;
+    }
+    .wave2 {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,40 C200,80 400,10 600,50 C800,90 1000,20 1200,50 L1200,120 L0,120 Z' fill='%230d1f2d'/%3E%3C/svg%3E") repeat-x;
+      background-size: 50% 100%;
+      animation: waveMove 18s linear infinite reverse;
+      opacity: 0.6;
+      bottom: 10px;
+    }
+    .wave3 {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,70 C180,30 380,90 600,55 C820,20 1020,80 1200,45 L1200,120 L0,120 Z' fill='%23112233'/%3E%3C/svg%3E") repeat-x;
+      background-size: 50% 100%;
+      animation: waveMove 22s linear infinite;
+      opacity: 0.35;
+      bottom: 20px;
+    }
+    @keyframes waveMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .stars-layer {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 10% 20%, rgba(255,255,255,0.9) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 50%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 55% 15%, rgba(255,255,255,0.85) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 20% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 85%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.65) 0%, transparent 100%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.55; }
+      100% { opacity: 0.85; }
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(40, 100, 160, 0.35) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 70%, rgba(20, 60, 100, 0.25) 0%, transparent 45%),
+        linear-gradient(180deg, #061018 0%, #0a1a28 45%, #070f18 100%);
+      padding: 50px 20px 100px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 5.5vw, 3.9rem);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+      text-shadow: 0 0 40px rgba(100, 180, 255, 0.25);
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+    .stars {
+      color: var(--accent);
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .stars span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-left: 8px;
+      letter-spacing: 0;
+    }
+    .hero-desc {
+      font-size: 1.12rem;
+      margin: 22px 0 28px;
+      max-width: 420px;
+      line-height: 1.7;
+      color: #e2e8f0;
+    }
+    .offer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, #ff6b35, #ff9f1c);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 7px 14px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 18px rgba(255, 107, 53, 0.4);
+      animation: pulseBadge 2.5s ease-in-out infinite;
+    }
+    @keyframes pulseBadge {
+      0%, 100% { box-shadow: 0 4px 18px rgba(255, 107, 53, 0.4); }
+      50% { box-shadow: 0 4px 28px rgba(255, 107, 53, 0.65); }
+    }
+    .price-box { margin-bottom: 8px; }
+    .price-old {
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .price-new {
+      font-size: 2.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-left: 8px;
+    }
+    .price-new small { font-size: 1rem; font-weight: 500; }
+    .timer {
+      font-size: 0.9rem;
+      color: #fca5a5;
+      margin-bottom: 28px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #111;
+      font-weight: 700;
+      font-size: 1.02rem;
+      padding: 16px 38px;
+      border-radius: 50px;
+      box-shadow: 0 8px 28px rgba(245, 158, 11, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(245, 158, 11, 0.55);
+    }
+    .btn-blue {
+      display: inline-block;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 34px;
+      border-radius: 50px;
+      box-shadow: 0 6px 22px rgba(59, 130, 246, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-blue:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(59, 130, 246, 0.5);
+    }
+    .hero-book {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-book img {
+      width: min(420px, 95%);
+      filter: drop-shadow(0 25px 50px rgba(0,0,0,0.55));
+      animation: floatBook 5s ease-in-out infinite;
+    }
+    @keyframes floatBook {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-14px) rotate(1deg); }
+    }
+    .hero-book::after {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(150, 210, 255, 0.3) 0%, transparent 70%);
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      pointer-events: none;
+      animation: glowPulse 4s ease-in-out infinite;
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+    }
+
+    .section-desc {
+      position: relative;
+      background: linear-gradient(180deg, #070f18 0%, #0a1522 100%);
+      padding: 90px 20px;
+      overflow: hidden;
+    }
+    .desc-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .desc-book img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .desc-book img:hover { transform: scale(1.03); }
+    .desc-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.25rem, 2.8vw, 1.65rem);
+      font-weight: 400;
+      line-height: 1.65;
+      color: #e2e8f0;
+      font-style: italic;
+    }
+
+    .section-why {
+      position: relative;
+      background: #08141f;
+      padding: 90px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .section-why h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.8vw, 2.3rem);
+      margin-bottom: 26px;
+      position: relative;
+      z-index: 2;
+    }
+    .why-text {
+      max-width: 700px;
+      margin: 0 auto 36px;
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.8;
+      position: relative;
+      z-index: 2;
+    }
+    .section-why .btn-blue { position: relative; z-index: 2; }
+
+    .section-emotional {
+      background: #070b12;
+      padding: 90px 20px;
+    }
+    .emotional-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 0;
+      align-items: stretch;
+      background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+    }
+    .emotional-photo {
+      position: relative;
+      min-height: 380px;
+    }
+    .emotional-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .emotional-content {
+      padding: 42px 40px 42px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .emotional-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+    .emotional-content p {
+      color: #94a3b8;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .emotional-content .cta-note {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 28px;
+    }
+
+    .section-testimonials {
+      background: linear-gradient(180deg, #070b12 0%, #0a1520 100%);
+      padding: 90px 20px 100px;
+      text-align: center;
+    }
+    .section-testimonials h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.8vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+    .section-testimonials .sub {
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      font-size: 1.05rem;
+    }
+    .testimonials-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .testimonial-card {
+      background: #141c2b;
+      border-radius: 16px;
+      padding: 26px 22px;
+      text-align: left;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+    }
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #334155, #1e293b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #94a3b8;
+      flex-shrink: 0;
+    }
+    .testimonial-name { font-weight: 600; font-size: 0.92rem; }
+    .testimonial-loc { font-size: 0.78rem; color: #64748b; }
+    .testimonial-stars {
+      color: var(--accent);
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .testimonial-text {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.65;
+    }
+
+    .section-contact {
+      background: #05080f;
+      padding: 70px 20px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-contact::before {
+      content: '';
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .contact-inner h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+    .contact-inner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      margin-bottom: 32px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .contact-item .label {
+      font-weight: 600;
+      min-width: 95px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      padding-top: 4px;
+    }
+    .contact-item a {
+      color: #e2e8f0;
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 22px;
+      background: #03050a;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-desc { margin-left: auto; margin-right: auto; }
+      .hero-book { order: -1; margin-bottom: 10px; }
+      .hero-book img { width: min(340px, 85%); }
+      .desc-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .desc-book { max-width: 240px; margin: 0 auto; }
+      .emotional-inner { grid-template-columns: 1fr; }
+      .emotional-photo { min-height: 280px; max-height: 320px; }
+      .emotional-content {
+        padding: 30px 24px 40px;
+        text-align: center;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero { padding-top: 36px; min-height: auto; }
+      .price-new { font-size: 2rem; }
+      .btn-primary, .btn-blue {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+      .waves { height: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="stars-layer"></div>
+    <div class="waves">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>O DESPERTAR</h1>
+        <p class="subtitle">“7 dias no mundo de Deus”</p>
+        <div class="stars">★★★★★ <span>Avaliado com 5 estrelas</span></div>
+        <p class="hero-desc">Descubra o que Deus pode fazer quando você separa 7 dias para Ele.</p>
+        <div class="offer-badge">⚡ OFERTA RELÂMPAGO</div>
+        <div class="price-box">
+          <span class="price-old">De 49,90</span>
+          <span class="price-new"><small>R$</small> 16,97</span>
+        </div>
+        <p class="timer">Termina em 24h</p>
+        <a href="https://pay.hotmart.com/K106810087W?bid=1787667253232" class="btn-primary" target="_blank" rel="noopener">COMEÇAR OS 7 DIAS</a>
+      </div>
+      <div class="hero-book">
+        <img src="https://i.ibb.co/DHbDnwN5/96227c8baa4311f2da115db7aa1b3029.png" alt="Livro O Despertar - Marlon Bastos" width="420" height="320">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-desc">
+    <div class="desc-inner">
+      <div class="desc-book">
+        <img src="https://i.ibb.co/DHbDnwN5/96227c8baa4311f2da115db7aa1b3029.png" alt="Capa do livro O Despertar" width="280" height="380">
+      </div>
+      <p class="desc-quote">
+        “O Despertar” não nasceu apenas para acordar almas adormecidas, mas para iluminar verdades que, mesmo diante dos olhos, ainda permaneciam invisíveis
+      </p>
+    </div>
+  </section>
+
+  <section class="section-why">
+    <div class="waves" style="opacity:0.5; height:120px;">
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    <h2>Por que eu preciso ler esse livro?</h2>
+    <p class="why-text">
+      “O Despertar – 7 Dias no Mundo de Deus” é mais que um livro — é um convite para transformar sua vida. Em sete dias, você será guiado por uma jornada que vai curar a tristeza, revelar seu propósito, fortalecer sua fé e renovar sua vida espiritual e familiar. Se algo dentro de você clama por mudança, esse é o seu chamado para despertar.
+    </p>
+    <a href="https://pay.hotmart.com/K106810087W?bid=1787667253232" class="btn-blue" target="_blank" rel="noopener">SAIBA MAIS</a>
+  </section>
+
+  <section class="section-emotional">
+    <div class="emotional-inner">
+      <div class="emotional-photo">
+        <img src="https://i.ibb.co/ch8KZgv3/e6f4a36d79d5b6af438873ba18ccd6fd.png" alt="Homem emocionado" width="340" height="400">
+      </div>
+      <div class="emotional-content">
+        <h3>“Não sei o que fazer mais”</h3>
+        <p>
+          “Você não precisa mais esconder a dor. Deus vê cada lágrima e conhece cada silêncio. O Despertar começa quando você decide não carregar tudo sozinho.”
+        </p>
+        <p class="cta-note">
+          Chegue em Saber Mais. Talvez o que você procura esteja mais perto do que imagina.
+        </p>
+        <a href="https://pay.hotmart.com/K106810087W?bid=1787667253232" class="btn-blue" target="_blank" rel="noopener">SAIBA MAIS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-testimonials">
+    <h2>Vidas transformadas por Deus</h2>
+    <p class="sub">Veja o que nossos leitores estão dizendo sobre o livro “O Despertar”</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">JC</div>
+          <div>
+            <div class="testimonial-name">Juliana Costa</div>
+            <div class="testimonial-loc">São Francisco, MG</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Quando minhas forças acabaram, sem dinheiro e sem direção, esse livro me deu uma nova esperança. Meus dias mudaram e minha vida hoje tem propósito.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Matheus Rodrigues</div>
+            <div class="testimonial-loc">Campinas, SP</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Comprei esse livro por minha namorada e me arrependi de não ter lido antes. A vida que a igreja tinha para apresentar agora faz sentido pra mim.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">FL</div>
+          <div>
+            <div class="testimonial-name">Felipe Lima</div>
+            <div class="testimonial-loc">Curitiba, PR</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Nunca pensei que 7 dias pudessem mudar tanto. Deus não me abandonou. Ele estava me esperando o tempo todo.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">BC</div>
+          <div>
+            <div class="testimonial-name">Bruno Carvalho</div>
+            <div class="testimonial-loc">Goiânia, GO</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Recomendo demais! A prática, profundidade e a presença de Deus. Já presenteei 3 amigos.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">RO</div>
+          <div>
+            <div class="testimonial-name">Rafael Oliveira</div>
+            <div class="testimonial-loc">Recife, PE</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Meu casamento estava por um fio. Esse livro me mostrou o caminho da reconciliação. Hoje somos outra família, gratos a Deus.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">IN</div>
+          <div>
+            <div class="testimonial-name">Isabela Nunes</div>
+            <div class="testimonial-loc">Nova Iguaçu, RJ</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Em um devocional por dia a minha vida foi sendo transformada aos poucos. Valeu cada página!”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">CS</div>
+          <div>
+            <div class="testimonial-name">Camila Santos</div>
+            <div class="testimonial-loc">Goiânia, GO</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Deus curou cada angústia que tinha comigo. Só senti abraçado por Ele através dessas páginas.”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">GM</div>
+          <div>
+            <div class="testimonial-name">Gabriela Martins</div>
+            <div class="testimonial-loc">Belo Horizonte, MG</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Eu tinha a ansiedade e a depressão, esse livro foi meu encontro com Deus. Sua palavra passa fogo!”</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="avatar">LA</div>
+          <div>
+            <div class="testimonial-name">Lucas Almeida</div>
+            <div class="testimonial-loc">São Paulo, SP</div>
+          </div>
+        </div>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">“Eu não ouvia mais a voz de Deus. Nesse tempo, depois que comecei o devocional, Ele voltou a falar comigo todos os dias.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contact">
+    <div class="contact-inner">
+      <h2>SUPORTES:</h2>
+      <h3>Fale conosco</h3>
+      <div class="contact-item">
+        <span class="label">SOCIAL</span>
+        <div><a href="https://instagram.com/marlonbastos" target="_blank" rel="noopener">@marlonbastos</a></div>
+      </div>
+      <div class="contact-item">
+        <span class="label">E-MAIL</span>
+        <a href="mailto:7marlonbastos@gmail.com">7marlonbastos@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">WHATSAPP</span>
+        <a href="https://wa.me/5515999999999" target="_blank" rel="noopener">Clique para falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Marlon Bastos — O Despertar. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
